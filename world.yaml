@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  selector:
+    matchLabels:
+      planet: hello
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          planet: hello
+      spec:
+        containers:
+          - name: hello-world
+            image: github.com/
